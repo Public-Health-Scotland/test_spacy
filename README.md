@@ -3,11 +3,15 @@ This Python project contains simple pipelines to create a NER application
 
 # **spacy**
 You need to download one of the available models:
-## English Models
 * en_core_web_sm: Small model optimized for CPU, suitable for basic tasks.
 * en_core_web_md: Medium model with word vectors, suitable for more complex tasks.
 * en_core_web_lg: Large model with extensive word vectors, suitable for high accuracy tasks.
 - You can install a model with this code: python -m spacy download en_core_web_sm
+- If you train spacy with your own data you can create your own package using: python -m spacy package ./ner_dose_model ./dose_ner --name dose_ner_test --version 1.0.0
+- These packages are important to create your executable whl: `pip install build twine`
+- Navigate to the directory where your model package is (e.g., ./output/en_my_model-1.0.0) and run: `python -m build`
+- Use twine to upload your package: `twine upload dist/*`
+## med7
 - If you want to install med7 (Last updated Nov 19, 2022): pip install https://huggingface.co/kormilitzin/en_core_med7_lg/resolve/refs%2Fpr%2F3/en_core_med7_lg-3.4.2.1-py3-none-any.whl
 . You will have more info from here: https://github.com/kormilitzin/med7
 - Article about med7: https://kormilitzin.medium.com/med7-clinical-information-extraction-system-in-python-and-spacy-5e6f68ab1c68
