@@ -1,5 +1,12 @@
 # **Project**
-This Python project contains simple pipelines to create a NER application
+This Python project contains simple pipelines to create a NER application - November 2025. It also contains subfolders with separate virtual environment creation and their own required packages.
+
+| Subproject/subfolder | Python |
+|----------------------|--------|
+| demo_spacy           | 3.13.x |
+| demo_med7            | 3.11.x |
+| demo_transformers    | 3.13.x |
+| demo_label           | 3.12.x |
 
 # **spacy**
 You need to download one of the available models:
@@ -26,17 +33,20 @@ These models can work with sentiment analysis, named entity recognition, questio
 There are some customised models for medical purposes
 - Biomed
 
-# Resources
-Base models:
-- https://huggingface.co/google-bert
-- https://huggingface.co/FacebookAI
+# Comments
+- This project contains subfolders with each README.md
+- You only need to create your Python venv once. The same with the installed packages unless you want to update any of them
+- Every time you want to run each subproject secion you need to make sure your virtual env is activated
 
-Fine tuned models:
-- https://huggingface.co/Simonlee711/Clinical_ModernBERT
 
 # Extra tools
-You will need this tool in order to label your data for fine tunning:
-https://labelstud.io/
-Possible datasets 
 - https://universe.roboflow.com/fast-nuces-xcmbn/prescription-labeling/dataset/3#
 - curl -L "https://universe.roboflow.com/ds/dsYQAnDdyu?key=Hx3NcG9JDD" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
+
+### Resource
+
+[How to use VS code in Posit Workbench](https://github.com/Public-Health-Scotland/vscode_prep)
+[Fine tune models](https://huggingface.co/Simonlee711/Clinical_ModernBERT)
+[Label studio tool for data labeling](https://labelstud.io/)
+[Models from Google](https://huggingface.co/google-bert)
+[Models from Meta](https://huggingface.co/FacebookAI)

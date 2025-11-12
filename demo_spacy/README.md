@@ -1,9 +1,12 @@
 # spacy NER
-- Create a Python 3.13 venv: python -m venv demo_spacy/.venvspac
-- Activate this venv: source demo_spacy/.venvspac
-- install packages from requirements.txt which is part of this folder
-- Run download_models.py to download some models or you can install a model with this command: python -m spacy download en_core_web_sm
-- Run test_demo_spacy.py
+- Create a Python 3.13 venv: `python -m venv demo_spacy/.venvspac`
+- Activate this venv: `source demo_spacy/.venvspac`
+- Update your venv pip: `pip install --upgrade pip`
+- Install wheel package to speed up package installation: `pip install wheel`
+- install packages from requirements.txt which is part of this subfolder: `pip install -r demo_spacy/requirements.txt --prefer-binary`
+- Run download_models.py to download some models: `python download_models.py`
+- Or you can install a model with this command: `python -m spacy download en_core_web_sm`
+- Run test_demo_spacy.py: `python test_demo_spacy.py`
 - You will be able to see some values in terminal related to amounts. (e.g. 100mg 500mg)
 
 ## Train your model

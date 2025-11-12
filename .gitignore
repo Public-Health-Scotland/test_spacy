@@ -10,3 +10,8 @@ my_modernbert/
 logs
 data/*.dat
 data/*.csv
+
+# virtual envs
+demo_transformers/.venvtrans/
+demo_spacy/.venvspac/
+demo_label/.venvlabel/

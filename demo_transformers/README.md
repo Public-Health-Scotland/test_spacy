@@ -1,0 +1,7 @@
+# transformers NER
+- Create a Python 3.13 venv: `python -m venv demo_transformers/.venvtrans`
+- Activate this venv: `source demo_transformers/.venvtrans/bin/activate`
+- Update your venv pip: `pip install --upgrade pip`
+- Install wheel package to speed up package installation: `pip install wheel`
+- Install packages from requirements.txt which is part of this subfolder: `pip install -r demo_transformers/requirements.txt --prefer-binary`
+- Run biomed example: `python test_biomed.py`
