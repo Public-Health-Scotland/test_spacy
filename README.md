@@ -11,6 +11,9 @@ This Python project contains simple pipelines to create a NER application - Nove
 | demo_transformers    | 3.13.x | [View demo_transformers README](./demo_transformers/README.md) |
 | demo_label           | 3.12.x | [View demo_label README](./demo_label/README.md)               |
 
+## Some internal data
+- Ask the project manager for internal data files. They are in .dat extension. Copy them in data folder.
+
 ## Some external data for fine tunning
 
 [data sample for fine tunning](https://universe.roboflow.com/fast-nuces-xcmbn/prescription-labeling/dataset/3#)
@@ -18,9 +21,6 @@ This Python project contains simple pipelines to create a NER application - Nove
 - Download this data to your session using the command: `curl -L "https://universe.roboflow.com/ds/dsYQAnDdyu?key=Hx3NcG9JDD" > roboflow.zip`
 - unzip the file using: `unzip roboflow.zip`
 - delete the zip file: `rm roboflow.zip`
-
-## Some internal data
-- Ask for internal data. They are in .dat extension. Copy them in data folder.
 
 ## Resource
 
