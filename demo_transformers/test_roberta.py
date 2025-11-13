@@ -1,6 +1,7 @@
 from transformers import RobertaTokenizer, RobertaForTokenClassification, pipeline
 import pandas as pd
 
+# local folder where the model will be downloaded the very first time
 model_dir =  '.model/'
 
 # Load the tokenizer and model

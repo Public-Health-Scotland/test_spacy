@@ -1,9 +1,10 @@
 from transformers import AutoModelForTokenClassification, AutoTokenizer, pipeline
 import pandas as pd
 
-# local folder
+# local folder where the model will be downloaded the very first time
 model_dir = '.model/'
 
+# load models
 model = AutoModelForTokenClassification.from_pretrained(
     "google-bert/bert-base-cased", cache_dir=model_dir)
 tokenizer = AutoTokenizer.from_pretrained(

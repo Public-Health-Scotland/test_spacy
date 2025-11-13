@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 import pandas as pd
 
-# local folder
+# local folder where the model will be downloaded the very first time
 model_dir =  '.model/'
 
 tokenizer = AutoTokenizer.from_pretrained("answerdotai/ModernBERT-base", cache_dir=model_dir)
