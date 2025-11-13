@@ -18,9 +18,13 @@
 - You will see the results in tereminal. Some detected words related to a medical prescription paragraph (Python variable text)
 - These models can also work with sentiment analysis, question answering, and text classification:
 
-Note: If you want to fine tune a model you need to consider a base model which is frequently being updated
+### Note
+
+- If you want to fine tune a model you need to consider a base model which is frequently being updated
+- test scripts are under development.
 
 ## Resources
 
-[Biomed](https://huggingface.co/d4data/biomedical-ner-all)
-[Clinical_ModernBERT](https://huggingface.co/Simonlee711/Clinical_ModernBERT)
+- [Biomed](https://huggingface.co/d4data/biomedical-ner-all)
+
+- [Clinical_ModernBERT](https://huggingface.co/Simonlee711/Clinical_ModernBERT)
