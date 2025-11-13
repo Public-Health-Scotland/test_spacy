@@ -15,3 +15,4 @@ data/*.csv
 demo_transformers/.venvtrans/
 demo_spacy/.venvspac/
 demo_label/.venvlabel/
+demo_med7/.venvmed7

@@ -6,4 +6,4 @@ This label studio tool is compatible with Python 3.12 (Nov 2025)
 - Update your venv pip: `pip install --upgrade pip`
 - Install packages from requirements.txt which is part of this subfolder: `pip install -r demo_label/requirements.txt --prefer-binary`
 - Run this command to open the tool: `label-studio`
-label-studio --help
+- This command will give you more options: `label-studio --help`
