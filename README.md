@@ -14,6 +14,11 @@ This Python project contains simple pipelines to create a NER application - Nove
 ## Some internal data
 - Ask the project manager for internal data files. They are in .dat extension. Copy them in data folder.
 
+## Proposal workflow diagram
+
+![Diagram](proposal.drawio.svg)
+
+
 ## Some external data for fine tunning
 
 [data sample for fine tunning](https://universe.roboflow.com/fast-nuces-xcmbn/prescription-labeling/dataset/3#)

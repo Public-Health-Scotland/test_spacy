@@ -11,3 +11,8 @@
 
 ## Considerations
 - Med 7 works only with numpy 1.26.4 and spacy 3.4.4. They are not compatible with Python 3.12
+
+
+## Diagram
+
+![Diagram](ed7.drawio.svg)

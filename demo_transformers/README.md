@@ -23,6 +23,10 @@
 - If you want to fine tune a model you need to consider a base model which is frequently being updated
 - test scripts are under development.
 
+## Diagram
+
+![Diagram](transformers.drawio.svg)
+
 ## Resources
 
 - [Biomed](https://huggingface.co/d4data/biomedical-ner-all)

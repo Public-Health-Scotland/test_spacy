@@ -25,3 +25,15 @@
 
 ## Considerations
 - Spacy 3.8.8 is currently compatible with Python 3.13.x (Nov 2025).
+
+## Diagram
+
+![Diagram](spacy.drawio.svg)
+
+## Resources
+
+- [Spacy Language support](https://spacy.io/usage/models#languages)
+
+- [Spacy CLI Documentation](https://spacy.io/api/cli)
+
+- [Spacy Visualizer](https://spacy.io/usage/visualizers)
