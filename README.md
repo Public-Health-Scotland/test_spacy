@@ -38,3 +38,5 @@ This Python project contains simple pipelines to create a NER application - Nove
 - [Models from Meta](https://huggingface.co/FacebookAI)
 
 - [Label studio tool for data labeling](https://labelstud.io/)
+
+- [Train with spacy](https://medium.com/@johnidouglasmarangon/train-a-custom-named-entity-recognition-with-spacy-v3-ea48dfce67a5)

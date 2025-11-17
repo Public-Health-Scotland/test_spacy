@@ -15,4 +15,4 @@
 
 ## Diagram
 
-![Diagram](ed7.drawio.svg)
+![Diagram](med7.drawio.svg)
