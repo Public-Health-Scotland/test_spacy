@@ -4,9 +4,9 @@
 - Update your venv pip: `pip install --upgrade pip`
 - Install wheel package to speed up package installation: `pip install wheel`
 - install packages from requirements.txt which is part of this subfolder: `pip install -r demo_spacy/requirements.txt --prefer-binary`
-- Run download_models.py to download some models: `python download_models.py`
+- Run download_models.py to download some models: `python demo_spacy/download_models.py`
 - Or you can install a model with this command: `python -m spacy download en_core_web_sm`
-- Run test_demo_spacy.py: `python test_demo_spacy.py`
+- Run test_demo_spacy.py: `python demo_spacy/test_demo_spacy.py`
 - You will be able to see some values in terminal related to amounts. (e.g. 100mg 500mg)
 
 ## Available models
