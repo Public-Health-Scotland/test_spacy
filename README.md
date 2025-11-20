@@ -16,7 +16,7 @@ This Python project contains simple pipelines to create a NER application - Nove
 
 ## Proposal workflow diagram
 
-![Diagram](proposal.drawio.svg)
+![Diagram](proposed.drawio.svg)
 
 
 ## Some external data for fine tunning
