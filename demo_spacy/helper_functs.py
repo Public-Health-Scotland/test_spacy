@@ -1,5 +1,7 @@
 import ast
 import pandas as pd
+from spacy.tokens import DocBin
+import spacy
 
 # Create function to prepare your custom data
 def safe_eval_list(x: str) -> list:
@@ -35,3 +37,20 @@ def fix_dataframe(data: pd.DataFrame) -> pd.DataFrame:
     
     return data
 
+def convert_to_spacy(DATA, file_name: str):
+    nlp = spacy.blank("en")
+    doc_bin = DocBin()
+    for text, annotations in DATA:
+        doc = nlp.make_doc(text)
+        ents = []
+        for start, end, label in annotations["entities"]:
+            # print(f"Label: {label}")
+            span = doc.char_span(start, end, label=label)
+            if span:
+                # print(f"span: {span}")
+                ents.append(span)
+        doc.ents = ents
+        doc_bin.add(doc)
+    
+    # exporting to a more efficient format
+    doc_bin.to_disk(f"./data/{file_name}.spacy")

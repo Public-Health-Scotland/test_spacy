@@ -1,9 +1,7 @@
 # Load required packages
-import spacy
 from spacy.training.example import Example
-from spacy.tokens import DocBin
 import pandas as pd
-from helper_functs import fix_dataframe
+from helper_functs import fix_dataframe, convert_to_spacy
 
 
 # Load Custon data
@@ -30,6 +28,9 @@ print(f"These are the available entities in train: {unique_values_train}")
 print(f"These are the available entities in test: {unique_values_val}")
 
 TRAIN_DATA = list(zip(train_data['sentence'], train_data['indexes']))
+VAL_DATA = list(zip(val_data['sentence'], val_data['indexes']))
+convert_to_spacy(TRAIN_DATA, 'train')
+convert_to_spacy(VAL_DATA, 'dev')
 
 # # Load blank model
 # nlp = spacy.blank("en")
@@ -43,21 +44,9 @@ TRAIN_DATA = list(zip(train_data['sentence'], train_data['indexes']))
 
 # print(type(TRAIN_DATA))
 
-# doc_bin = DocBin()
-# for text, annotations in TRAIN_DATA:
-#     doc = nlp.make_doc(text)
-#     ents = []
-#     for start, end, label in annotations["entities"]:
-#         # print(f"Label: {label}")
-#         span = doc.char_span(start, end, label=label)
-#         if span:
-#             # print(f"span: {span}")
-#             ents.append(span)
-#     doc.ents = ents
-#     doc_bin.add(doc)
 
-# # exporting to a more efficient format
-# doc_bin.to_disk("./data/train.spacy")
+
+
 
 
 
