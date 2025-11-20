@@ -1,3 +1,8 @@
+# temp folder
+__pycache__/
+*.pyc
+*.pyo
+
 # model
 ner_custom_model/
 ner_dose_model/
@@ -10,3 +15,10 @@ my_modernbert/
 logs
 data/*.dat
 data/*.csv
+data/*.spacy
+
+# virtual envs
+demo_transformers/.venvtrans/
+demo_spacy/.venvspac/
+demo_label/.venvlabel/
+demo_med7/.venvmed7

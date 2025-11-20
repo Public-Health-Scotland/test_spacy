@@ -1,6 +1,5 @@
 import pandas as pd
 import ast
-import re
 
 list_files = ['./data/resolved_data_22-Aug-2023-1030.dat',
                 "./data/crosschecked_data_22-Aug-2023-1030.dat"]

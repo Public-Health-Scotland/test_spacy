@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer, AutoModelForTokenClassification, pipeline
 import pandas as pd
 
-# local folder
+# local folder where the model will be downloaded the very first time
 model_dir =  '.model/'
 
 model = AutoModelForTokenClassification.from_pretrained('Simonlee711/Clinical_ModernBERT', cache_dir=model_dir)

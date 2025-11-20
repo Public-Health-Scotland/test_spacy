@@ -1,45 +1,42 @@
 # **Project**
-This Python project contains simple pipelines to create a NER application
+This Python project contains simple pipelines to create a NER application - November 2025. It contains subfolders with separate virtual environment creation and their own required packages. Keep in mind these considerations:
 
-# **spacy**
-You need to download one of the available models:
-* en_core_web_sm: Small model optimized for CPU, suitable for basic tasks.
-* en_core_web_md: Medium model with word vectors, suitable for more complex tasks.
-* en_core_web_lg: Large model with extensive word vectors, suitable for high accuracy tasks.
-- You can install a model with this code: python -m spacy download en_core_web_sm
-- If you train spacy with your own data you can create your own package using: python -m spacy package ./ner_dose_model ./dose_ner --name dose_ner_test --version 1.0.0
-- These packages are important to create your executable whl: `pip install build twine`
-- Navigate to the directory where your model package is (e.g., ./output/en_my_model-1.0.0) and run: `python -m build`
-- Use twine to upload your package: `twine upload dist/*`
-## med7
-- If you want to install med7 (Last updated Nov 19, 2022): pip install https://huggingface.co/kormilitzin/en_core_med7_lg/resolve/refs%2Fpr%2F3/en_core_med7_lg-3.4.2.1-py3-none-any.whl
-. You will have more info from here: https://github.com/kormilitzin/med7
-- Article about med7: https://kormilitzin.medium.com/med7-clinical-information-extraction-system-in-python-and-spacy-5e6f68ab1c68
+- You only need to create your Python venv once (each subfolder has one). The same about installed packages unless you want to update any of them
+- Every time you want to run each subproject section you make sure the virtual env is activated
 
-## Considerations
-- Spacy is not compatible with Python 3.13 (May 2025). Ref: https://github.com/explosion/spaCy/issues/13658
-- Med 7 requires numpy 1.26.4 and spacy 3.4.4 and it is not compatible with Python 3.12
+| Subproject/subfolder | Python | More info                                                      |
+|----------------------|--------|----------------------------------------------------------------|
+| demo_spacy           | 3.13.x | [View demo_spacy README](./demo_spacy/README.md)               |
+| demo_med7            | 3.11.x | [View demo_med7 README](./demo_med7/README.md)                 |
+| demo_transformers    | 3.13.x | [View demo_transformers README](./demo_transformers/README.md) |
+| demo_label           | 3.12.x | [View demo_label README](./demo_label/README.md)               |
 
-# Transformers
-These models can work with sentiment analysis, named entity recognition, question answering, and text classification. There are some base models available for future evaluation
-- Bert
-- DistilBert
-- RoBerta
+## Some internal data
+- Ask the project manager for internal data files. They are in .dat extension. Copy them in data folder.
 
-There are some customised models for medical purposes
-- Biomed
+## Proposal workflow diagram
 
-# Resources
-Base models:
-- https://huggingface.co/google-bert
-- https://huggingface.co/FacebookAI
+![Diagram](proposed.drawio.svg)
 
-Fine tuned models:
-- https://huggingface.co/Simonlee711/Clinical_ModernBERT
 
-# Extra tools
-You will need this tool in order to label your data for fine tunning:
-https://labelstud.io/
-Possible datasets 
-- https://universe.roboflow.com/fast-nuces-xcmbn/prescription-labeling/dataset/3#
-- curl -L "https://universe.roboflow.com/ds/dsYQAnDdyu?key=Hx3NcG9JDD" > roboflow.zip; unzip roboflow.zip; rm roboflow.zip
+## Some external data for fine tunning
+
+[data sample for fine tunning](https://universe.roboflow.com/fast-nuces-xcmbn/prescription-labeling/dataset/3#)
+
+- Download this data to your session using the command: `curl -L "https://universe.roboflow.com/ds/dsYQAnDdyu?key=Hx3NcG9JDD" > roboflow.zip`
+- unzip the file using: `unzip roboflow.zip`
+- delete the zip file: `rm roboflow.zip`
+
+## Resource
+
+- [How to use VS code in Posit Workbench](https://github.com/Public-Health-Scotland/vscode_prep)
+
+- [Fine tune models](https://huggingface.co/Simonlee711/Clinical_ModernBERT)
+
+- [Models from Google](https://huggingface.co/google-bert)
+
+- [Models from Meta](https://huggingface.co/FacebookAI)
+
+- [Label studio tool for data labeling](https://labelstud.io/)
+
+- [Train with spacy](https://medium.com/@johnidouglasmarangon/train-a-custom-named-entity-recognition-with-spacy-v3-ea48dfce67a5)
