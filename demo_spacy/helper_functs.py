@@ -2,6 +2,38 @@ import ast
 import pandas as pd
 from spacy.tokens import DocBin
 import spacy
+import json
+import random
+
+
+def get_train_test_val(data):
+    random.seed(42)  # For reproducibility
+
+    # Sizes
+    train_size = int(len(data) * 0.7)
+    val_size = int(len(data) * 0.15)
+
+    # Shuffle data
+    random.shuffle(data)
+
+    # Split
+    train = data[:train_size]
+    val = data[train_size:train_size + val_size]
+    test = data[train_size + val_size:]
+    return train, val, test
+
+
+def from_json_to_prevspacy(file_path: str):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    annotations = [item for item in data.get("annotations", []) if item is not None]
+    # print(annotations)
+    result = []
+    for element in annotations:
+        data_dict = {"entities": [tuple(item) for item in element[1].get("entities", [])]}
+        # print(tuple([element[0], data_dict]))
+        result.append(tuple([element[0], data_dict]))
+    return result
 
 # Create function to prepare your custom data
 def safe_eval_list(x: str) -> list:

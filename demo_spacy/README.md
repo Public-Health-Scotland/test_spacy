@@ -20,8 +20,11 @@
 ## Train your model
 - Prepare your dat files in spacy format. You can run: `python demo_spacy/prepare_data_spacy.py`
 - Create your config file: `python -m spacy init config demo_spacy/config.cfg --lang en --pipeline ner --optimize efficiency --force`
-- Train your model: `python -m spacy train demo_spacy/config.cfg --output .model/ner_dose_model --paths.train /data/train.spacy --paths.dev data/dev.spacy`
-- You can create your own package using: `python -m spacy package .model/ner_dose_model ./dose_ner --name dose_ner_test --version 1.0.0`
+- Train your model using a bash file to get execution time. Run this command: `bash demo_spacy/run.sh`
+- You can create your own package using: `python -m spacy package .model/ner_dose_model/model-best .packages --name ner_dose_phs --version 1.0.0`
+- You will have a .packages/en_ner_dose_phs-1.0.0/dist/en_ner_dose_phs-1.0.0.tar.gz file which you can internally share with your team. If you want to install on another sessions run this command: `pip install .packages/en_ner_dose_phs-1.0.0/dist/en_ner_dose_phs-1.0.0.tar.gz`
+
+## Optional (share via PyPI)
 - Install twins to create your wheel installer: `pip install build twine`
 - Navigate to the directory where your model package is (e.g., ./output/en_my_model-1.0.0) and run: `python -m build`
 - Use twine to upload your package: `twine upload dist/*`
