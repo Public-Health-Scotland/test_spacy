@@ -60,6 +60,14 @@ df_test = pd.DataFrame(TEST)
 df_test.rename(columns={0: 'sentence', 1: 'entities'}, inplace=True)
 df_test.to_csv('data/test.csv', index=False)
 
+# df_test = pd.DataFrame(TRAIN)
+# df_test.rename(columns={0: 'sentence', 1: 'entities'}, inplace=True)
+# df_test.to_csv('data/TRAIN.csv', index=False)
+
+# df_test = pd.DataFrame(VAL)
+# df_test.rename(columns={0: 'sentence', 1: 'entities'}, inplace=True)
+# df_test.to_csv('data/VAL.csv', index=False)
+
 # convert_to_spacy(merged, 'total')
 # # Load blank model
 # nlp = spacy.blank("en")
