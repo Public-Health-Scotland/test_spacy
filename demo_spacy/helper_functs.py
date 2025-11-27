@@ -5,7 +5,6 @@ import spacy
 import json
 import random
 
-
 def get_train_test_val(data):
     random.seed(42)  # For reproducibility
 
@@ -21,7 +20,6 @@ def get_train_test_val(data):
     val = data[train_size:train_size + val_size]
     test = data[train_size + val_size:]
     return train, val, test
-
 
 def from_json_to_prevspacy(file_path: str):
     with open(file_path, 'r') as file:
@@ -43,7 +41,7 @@ def safe_eval_list(x: str) -> list:
         return ast.literal_eval(x.strip())
     except (SyntaxError, ValueError):
         fixed = x.strip()
-        print(f"error: {fixed}")
+        # print(f"error: {fixed}")
         if len(fixed) > 3:
             if not fixed.startswith('[['):
                 fixed = '[' + fixed

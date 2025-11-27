@@ -18,13 +18,21 @@
 | en_core_web_lg | Large model with extensive word vectors, suitable for high accuracy tasks |
 
 ## Train your model
-- Prepare your dat files in spacy format. You can run: `python demo_spacy/prepare_data_spacy.py`
+- Don't forget to activate your virtual environment: `source demo_spacy/.venvspac/bin/activate`
+- Prepare your dat and json files, merge all, split into train, val and test, convert them in spacy format: `python demo_spacy/prepare_data_spacy.py`
+![alt text](img/image.png)
 - Create your config file: `python -m spacy init config demo_spacy/config.cfg --lang en --pipeline ner --optimize efficiency --force`
-- Train your model using a bash file to get execution time. Run this command: `bash demo_spacy/run.sh`
+- **Train** your model using a bash file to get execution time. Run this command: `bash demo_spacy/run.sh`
+![alt text](image.png)
+- it can roughly take 460 seconds for TRAIN length 11882 and VAL length 2546
+- It's time to predict using our test.csv file (a couple of secs for 2547 sentences). Run this commmand: `python demo_spacy/test_your_model.py `
+![alt text](img/image-3.png)
+
+## (Optional) Create a tar.gz file to share your model
 - You can create your own package using: `python -m spacy package .model/ner_dose_model/model-best .packages --name ner_dose_phs --version 1.0.0`
 - You will have a .packages/en_ner_dose_phs-1.0.0/dist/en_ner_dose_phs-1.0.0.tar.gz file which you can internally share with your team. If you want to install on another sessions run this command: `pip install .packages/en_ner_dose_phs-1.0.0/dist/en_ner_dose_phs-1.0.0.tar.gz`
 
-## Optional (share via PyPI)
+## (Optional) share via PyPI
 - Install twins to create your wheel installer: `pip install build twine`
 - Navigate to the directory where your model package is (e.g., ./output/en_my_model-1.0.0) and run: `python -m build`
 - Use twine to upload your package: `twine upload dist/*`
