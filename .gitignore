@@ -16,6 +16,8 @@ logs
 data/*.dat
 data/*.csv
 data/*.spacy
+data/*.json
+.packages
 
 # virtual envs
 demo_transformers/.venvtrans/
